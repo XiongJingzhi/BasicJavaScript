@@ -34,3 +34,4 @@ Function.prototype.myapply = function(obj) {
 
 bar.myapply(foo, 1, 2)
 bar.mycall(foo, 1, 2)
+console.log('git hook test')
