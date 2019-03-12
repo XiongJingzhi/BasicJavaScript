@@ -9,7 +9,7 @@
  - [数据结构](#数据结构)
   - [类型](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/data_types.js)
   - [实例](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/lexical_grammar.js)
- - [执行过程(算法)]（#执行过程(算法)）
+ - [执行过程(算法)](#执行过程(算法))
   
 ## 语义
 
