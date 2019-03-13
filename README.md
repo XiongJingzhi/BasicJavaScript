@@ -7,8 +7,6 @@
 
 ## 运行时
  - [数据结构](#数据结构)
-  - [类型](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/data_types.md)
-  - [实例](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/lexical_grammar.md)
  - [执行过程(算法)](#执行过程(算法))
   
 ## 语义
@@ -20,6 +18,11 @@
 
 ### 语法
   - [语句、程序与模块](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/statement_program_module.md)
+
+### 数据结构
+  - [数据类型](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/data_types.md)
+  - [规范类型](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/data_specification_types.md)
+  - [实例]
 
 ### 执行过程(算法)
   - [执行上下文栈](https://github.com/XiongJingzhi/BasicJavaScript/blob/master/src/execution_context_stack.md)
