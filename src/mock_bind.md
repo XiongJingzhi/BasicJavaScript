@@ -1,3 +1,8 @@
+## 模拟bind
+
+bind 作用，改变this指向，同时有...agruments参数，可返回
+
+``` javascript
 Function.prototype.mybind = function(obj) {
   if (typeof this !== 'function') {
     throw new Error('Function.prototype.bind - what is trying to be bound is not callable')
@@ -33,3 +38,4 @@ var a = new boundGetX(1, 2, 3, 4)
 // console.log(boundGetX(6))
 console.log(a)
 a.say()
+```

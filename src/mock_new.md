@@ -1,3 +1,8 @@
+## new 操作符
+
+作用：构造函数，生成对象，并把this指向这个对象。
+
+``` javascript
 // es5
 function Aa(a, b) {
   this.a = a
@@ -59,3 +64,4 @@ class Bb {
 var b = new Bb(1, 's')
 b.say()
 console.log(b.getName())
+```

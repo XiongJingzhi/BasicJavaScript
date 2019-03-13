@@ -1,4 +1,8 @@
-// apply call 用来改变函数this指向
+# call apply
+
+apply call 用来改变函数this指向, apply第二个参数为array，call第二个参数...arguments。
+
+``` javascript
 var foo = {
   name: 'xx',
   age: 14
@@ -35,3 +39,4 @@ Function.prototype.myapply = function(obj) {
 bar.myapply(foo, 1, 2)
 bar.mycall(foo, 1, 2)
 console.log('git hook test')
+```

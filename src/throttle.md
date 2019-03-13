@@ -1,5 +1,8 @@
-// 原理： 如果你持续触发事件，每隔一段时间，只执行一次事件。
+## 限流
 
+原理： 如果你持续触发事件，每隔一段时间，只执行一次事件。
+
+``` javascript
 // v1 时间戳, 第一次会立刻执行，第二次事件wait后执行，停止触发后不会再执行
 function throttle(func, wait) {
   let context, args
@@ -106,3 +109,4 @@ function throttle(func, wait, options) {
 
   return throttled
 }
+```
