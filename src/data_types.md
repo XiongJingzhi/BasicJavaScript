@@ -44,7 +44,7 @@ JavaScript的字符串类型用于表示文本数据
 
 String 的意义并非“字符串”，而是字符串的 UCS-2（已被UTF16合并） 编码,
 
-UTF16编码分两种： U\+000\~U\+FFFF: 2 Byte存储(BMP);  U\+10000\~U\+10FFFF: 4 Byte存储（SMP);
+UTF16编码分两种： U\+000\~U\+FFFF: 2 Byte存储(BMP);  U\+10000\~U\+10FFFF: 4 Byte存储(SMP);
 
 它是一组16位的无符号整数值的“元素”, 也就意味着，它采用2 Byte存储, 其最大长度为2^53 - 1
 
