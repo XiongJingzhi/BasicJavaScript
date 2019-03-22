@@ -5,6 +5,11 @@
   - Array.length
   - Array.prototype
   - Array.prototype[@@unscopables]
+  
+### 方法分类
+  - 返回 修改了的原数组
+  - 返回 新数组
+  - 放回 iterator 对象
 
 ### 方法
 
@@ -43,7 +48,7 @@
       return res
     }
   ```
-  - Array.prototype.concat(valueN) 用于合并两个或多个（数组或值）, 函数式
+  - Array.prototype.concat(valueN) 用于合并两个或多个（数组或值）, return new_array
   ``` javascript
     function contact(old_array) {
       let res = old_array
@@ -60,7 +65,7 @@
       return res
     }
   ```
-  - Array.prototype.copyWithin(target, start, end) 复制数组的一部分到同一数组中的另一个位置, 并返回它, 修改了原数组
+  - Array.prototype.copyWithin(target[, start[, end]]) return old_array 
   ``` javascript
     function push(array, item) {
       array[array.length] = item
@@ -82,5 +87,82 @@
         old_array[target+i] = arr[i]
       }
       return old_array
+    }
+  ```
+  - Array.prototype.entries  没有参数，返回可迭代对象 return new iterator object
+  ``` javascript
+  function makeIterator(array){
+    var nextIndex = 0
+    return {
+      next: function() {
+         return nextIndex < array.length ?
+          {value: [nextIndex, array[nextIndex++]], done: false} :
+          {value: undefined, done: true}
+      }
+    }
+  }
+  ```
+  - Array.prototype.values()
+  ``` javascript
+    function arrayValues(array) {
+      var nextIndex = 0
+      return {
+        next: function() {
+          return nextIndex < array.length ?
+            {value: array[nextIndex++], done: false} :
+            {value: undefined, done: true}
+        }
+      }
+    }
+  ```
+  - Array.prototype.key()
+  ``` javascript
+    function arrayValues(array) {
+      var nextIndex = 0
+      return {
+        next: function() {
+          return nextIndex < array.length ?
+            {value: nextIndex++, done: false} :
+            {value: undefined, done: true}
+        }
+      }
+    }
+  ```
+  - Array.prototype.every(callback[, thisArg]) return boolean
+  ``` javascript
+    function arrayEvery(array, callback, thisArg) {
+      thisArg = thisArg || this
+      let res = true
+      for (let i = 0, length = array.length; i < length; i++) {
+        if (!callback.call(thisArg, array[i])) {
+          res = false
+          break
+        }
+      }
+      return res
+    }
+  ```
+  - Array.prototype.fill(value[, start==0[, end==this.length]]), return old_array
+  ``` javascript
+    function arrayfill(array, value, start, end) {
+      let length = array.length
+      start = start >= 0 ? start : length + start
+      end = end >= 0 ? end : length + end
+      for (let i = start; i < end; i++ ) {
+        array[i] = value
+      }
+      return array
+    }
+  ```
+  - Array.prototype.filter(callback(element[, index[, array]])[, thisArg]), return new_array if none pass, return []
+  ``` javascript
+    function arrayFilter(array, callback, thisArg) {
+      let res = []
+      for (let i = 0, length = array.length; i < length; i++) {
+        if (callback.call(thisArg, array[i])) {
+          res.push(array[i])
+        }
+      }
+      return res
     }
   ```
